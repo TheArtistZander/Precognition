@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precognition | Official Website</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <header>
+        <h1>Precognition</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Welcome to <strong>Precognition</strong>, a solo music project exploring sound and emotion.</p>
+    </section>
+
+    <section id="music">
+        <h2>Music</h2>
+        <p>Listen to my latest tracks below.</p>
+
+        <div id="audio-player">
+            <p>Select a track:</p>
+            <select id="track-selector">
+                <option value="1.m4a">Still Standing</option>
+                <option value="2.m4a">Taking My Time</option>
+                <option value="3.m4a">My Friend</option>
+                <option value="4.m4a">Forever</option>
+                <option value="5.m4a">Truth</option>
+                <option value="6.m4a">Taking My Time</option>
+            </select>
+
+            <audio id="audio-control" controls>
+                <source id="audio-source" src="1.m4a" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Want to collaborate or reach out? Send me a message!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Precognition. All rights reserved.</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

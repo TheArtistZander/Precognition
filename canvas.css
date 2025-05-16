@@ -1,0 +1,98 @@
+/* Import Gothic Blackletter Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Engravers+Old+English&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Fruktur', serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/parchment-texture.jpg'); /* Parchment texture */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+header {
+    background-color: rgba(17, 17, 17, 0.9);
+    padding: 30px;
+    text-align: center;
+    border-bottom: 3px solid #cc0000;
+}
+
+header h1 {
+    font-family: 'Engravers Old English', serif;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #cc0000; /* Deep red gothic text */
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-family: 'Fruktur', serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #cc0000; /* Deep red accent */
+}
+
+/* Section Styling */
+section {
+    padding: 60px;
+    text-align: center;
+    font-family: 'Fruktur', serif;
+    border: 2px solid #cc0000;
+    margin: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #cc0000;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Music Player */
+audio {
+    width: 70%;
+    max-width: 400px;
+    margin-top: 30px;
+    filter: invert(100%);
+}
+
+/* Contact Section */
+#contact {
+    background-color: rgba(17, 17, 17, 0.9);
+    border-top: 3px solid #cc0000;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(17, 17, 17, 0.9);
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    font-family: 'Engravers Old English', serif;
+    border-top: 3px solid #cc0000;
+    color: #cc0000;
+}
