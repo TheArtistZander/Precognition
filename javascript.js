@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
+                const scrollOffset = window.innerWidth < 500 ? 30 : 50;
                 window.scrollTo({
-                    top: targetElement.offsetTop - 50,
+                    top: targetElement.offsetTop - scrollOffset,
                     behavior: "smooth"
                 });
             }
@@ -23,25 +24,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const audioControl = document.getElementById("audio-control");
     const audioSource = document.getElementById("audio-source");
 
-    trackSelector.addEventListener("change", function () {
-        const selectedTrack = trackSelector.value;
-        audioSource.src = selectedTrack;
-        audioControl.load(); // Refresh player to apply the new source
-        audioControl.play(); // Start playing automatically
-    });
+    if (trackSelector && audioControl && audioSource) {
+        trackSelector.addEventListener("change", function () {
+            const selectedTrack = trackSelector.value;
+            audioSource.src = selectedTrack;
+            audioControl.load();
+            audioControl.play();
+        });
+    }
 
-    // Fade-in effect for sections
-    const sections = document.querySelectorAll("section");
-    sections.forEach(section => {
-        section.style.opacity = "0";
-        section.style.transition = "opacity 1.5s ease-in-out";
+    // Fade-in effect for sections and bio image
+    const fadeElements = [
+        ...document.querySelectorAll("section"),
+        document.querySelector(".bio-image")
+    ];
+
+    fadeElements.forEach(el => {
+        if (el) {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 1.5s ease-in-out";
+        }
     });
 
     window.addEventListener("scroll", function () {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            if (sectionTop < window.innerHeight - 100) {
-                section.style.opacity = "1";
+        fadeElements.forEach(el => {
+            if (el) {
+                const elTop = el.getBoundingClientRect().top;
+                if (elTop < window.innerHeight - 100) {
+                    el.style.opacity = "1";
+                }
             }
         });
     });
