@@ -85,11 +85,11 @@ h2 {
 
 /* Music Player */
 #audio-player {
-    text-align: center;
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    margin-top: 30px;
 }
 
 #audio-player select {
@@ -101,7 +101,10 @@ h2 {
 
 #track-selector {
     margin-bottom: 15px;
+    font-size: 1.2em;
+    padding: 8px;
 }
+
 
 audio {
     width: 70%;
