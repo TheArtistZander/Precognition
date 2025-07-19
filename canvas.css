@@ -1,16 +1,19 @@
-/* Import Gothic Blackletter Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Engravers+Old+English&display=swap');
+/* Font Imports: Gothic & Readable Pairing */
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Engravers+Old+English&family=Cinzel&display=swap');
 
 /* General Styles */
 body {
-    font-family: 'Fruktur', serif;
+    font-family: 'Cinzel', serif; /* More readable for body text */
     background-color: #000000;
     color: #ffffff;
     margin: 0;
     padding: 0;
-    background-image: url('images/parchment-texture.jpg'); /* Parchment texture */
+    background-image: url('images/parchment-texture.jpg');
     background-size: cover;
     background-position: center;
+    line-height: 1.6;
+    font-size: 1em;
+    letter-spacing: 0.5px;
 }
 
 /* Header */
@@ -26,7 +29,8 @@ header h1 {
     font-size: 3.5em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #cc0000; /* Deep red gothic text */
+    color: #cc0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 /* Navigation */
@@ -35,6 +39,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -42,42 +47,57 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'Fruktur', serif;
+    font-family: 'Cinzel', serif;
     color: #ffffff;
     text-decoration: none;
     font-size: 1.5em;
     transition: color 0.3s ease-in-out;
+    text-shadow: none;
 }
 
 nav ul li a:hover {
-    color: #cc0000; /* Deep red accent */
+    color: #cc0000;
 }
 
 /* Section Styling */
 section {
     padding: 60px;
     text-align: center;
-    font-family: 'Fruktur', serif;
+    font-family: 'Cinzel', serif;
     border: 2px solid #cc0000;
     margin: 20px;
     backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 /* Section Titles */
 h2 {
+    font-family: 'Engravers Old English', serif;
     font-size: 2.5em;
     text-transform: uppercase;
     border-bottom: 2px solid #cc0000;
     display: inline-block;
     padding-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 /* Music Player */
+#audio-player {
+    margin-top: 30px;
+}
+
+#audio-player select {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    padding: 8px;
+    max-width: 100%;
+}
+
 audio {
     width: 70%;
     max-width: 400px;
-    margin-top: 30px;
     filter: invert(100%);
+    margin-top: 30px;
 }
 
 /* Contact Section */
@@ -95,4 +115,52 @@ footer {
     font-family: 'Engravers Old English', serif;
     border-top: 3px solid #cc0000;
     color: #cc0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* Responsive Enhancements */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1.1em;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.4em;
+    }
+
+    section {
+        padding: 30px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    #audio-player select,
+    audio {
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.9em;
+    }
 }
