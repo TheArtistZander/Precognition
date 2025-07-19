@@ -3,7 +3,7 @@
 
 /* General Styles */
 body {
-    font-family: 'Cinzel', serif; /* More readable for body text */
+    font-family: 'Cinzel', serif; /* Readable gothic-inspired font */
     background-color: #000000;
     color: #ffffff;
     margin: 0;
@@ -68,6 +68,8 @@ section {
     margin: 20px;
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
 }
 
 /* Section Titles */
@@ -98,6 +100,20 @@ audio {
     max-width: 400px;
     filter: invert(100%);
     margin-top: 30px;
+}
+
+/* Bio Image Styling */
+.bio-image {
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.bio-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #cc0000;
 }
 
 /* Contact Section */
@@ -157,6 +173,10 @@ footer {
     #audio-player select,
     audio {
         width: 100%;
+    }
+
+    .bio-image {
+        padding: 0 10px;
     }
 
     footer {
