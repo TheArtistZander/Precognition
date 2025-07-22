@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Precognition website loaded!");
 
+    // Scroll to top on page refresh
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 50);
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll("nav ul li a");
     navLinks.forEach(link => {
@@ -26,23 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
     if (trackSelector && audioControl) {
         trackSelector.addEventListener("change", function () {
             const baseName = this.value.replace(/\.(mp3|m4a)$/i, "");
-            
-            // Clear previous sources
+
             audioControl.innerHTML = "";
 
-            // Create MP3 source
             const mp3Source = document.createElement("source");
             mp3Source.src = `${baseName}.mp3`;
             mp3Source.type = "audio/mpeg";
             audioControl.appendChild(mp3Source);
 
-            // Create M4A fallback source
             const m4aSource = document.createElement("source");
             m4aSource.src = `${baseName}.m4a`;
             m4aSource.type = "audio/mp4";
             audioControl.appendChild(m4aSource);
 
-            // Reload and attempt autoplay
+            audioControl.pause();
             audioControl.load();
             audioControl.play().catch(err => {
                 console.warn("Autoplay might be blocked:", err);
@@ -50,10 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Fade-in animations for sections and bio image
+    // Fade-in animations for sections, images, and gallery
     const animatedElements = [
         ...document.querySelectorAll("section"),
-        document.querySelector(".bio-image")
+        document.querySelector(".bio-image"),
+        document.querySelector(".band-image"),
+        document.querySelector("#gallery")
     ];
 
     animatedElements.forEach(el => {
@@ -75,12 +79,5 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Trigger on load in case elements are already visible
+    revealOnScroll(); // Trigger on load for visible elements
 });
-
-const animatedElements = [
-    ...document.querySelectorAll("section"),
-    document.querySelector(".bio-image"),
-    document.querySelector(".band-image"),      // ✅ Add this line
-    document.querySelector("#gallery")          // ✅ Add this line
-];
