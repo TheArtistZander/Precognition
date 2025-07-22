@@ -77,3 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll(); // Trigger on load in case elements are already visible
 });
+
+const animatedElements = [
+    ...document.querySelectorAll("section"),
+    document.querySelector(".bio-image"),
+    document.querySelector(".band-image"),      // ✅ Add this line
+    document.querySelector("#gallery")          // ✅ Add this line
+];
