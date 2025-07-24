@@ -252,3 +252,39 @@ footer {
         max-width: 90%;
     }
 }
+/* Bold Instagram Banner */
+.instagram-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #cc0000;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(204, 0, 0, 0.6);
+    margin-top: 20px;
+}
+
+.instagram-banner img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.instagram-banner span {
+    font-family: 'Engravers Old English', serif;
+    font-size: 1.2em;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.instagram-banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #cc0000;
+}
+
+.instagram-banner:hover img {
+    filter: none;
+}
