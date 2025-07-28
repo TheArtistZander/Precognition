@@ -297,35 +297,10 @@ footer {
     }
 }
 
-.band-image {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: #000; /* optional background */
-}
-
-.band-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.full-image-wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000; /* Optional */
-  overflow: hidden;
-}
-
-.full-image-wrapper img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
+/* ========== 🎬 HERO IMAGE FIX ========== */
+.hero-image-wrapper {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100vw;
+    height:
