@@ -114,6 +114,6 @@ function typeWriter(element, text, speed = 60, callback) {
 // Example usage:
 document.addEventListener("DOMContentLoaded", () => {
   const target = document.getElementById("typewriter");
-  const message = "Welcome to the Precognition website.";
+  const message = "Precognition";
   typeWriter(target, message, 75);
 });
