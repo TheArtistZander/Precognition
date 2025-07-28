@@ -288,3 +288,45 @@ footer {
 .instagram-banner:hover img {
     filter: none;
 }
+/* Contact Section */
+#contact {
+    background-color: rgba(17, 17, 17, 0.9);
+    border-top: 3px solid #cc0000;
+    padding: 20px;
+}
+
+#contact p {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1em;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    color: #ffffff;
+}
+
+.email-link {
+    color: #cc0000;
+    font-weight: bold;
+    text-decoration: none;
+    word-break: break-word;
+    font-family: 'Engravers Old English', serif;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.email-link:hover {
+    text-shadow: 0 0 5px #cc0000;
+}
+
+/* Responsive Enhancements for Contact */
+@media screen and (max-width: 768px) {
+    #contact p {
+        font-size: 0.95em;
+    }
+
+    .email-link {
+        font-size: 1em;
+    }
+}
+
