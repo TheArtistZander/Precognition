@@ -296,19 +296,19 @@ footer {
         font-size: 1em;
     }
 }
+.band-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
 .band-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 0;
   margin: 0;
-  padding: 0;
-  height: auto; /* Don't lock it to 100vh */
-}
-
-.band-image img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: calc(100vh - 60px); /* Fits within viewport minus header */
-  object-fit: contain; /* Shows full image without cropping */
 }
