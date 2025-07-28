@@ -94,3 +94,26 @@ function debounce(func, delay = 10) {
         timer = setTimeout(func, delay);
     };
 }
+function typeWriter(element, text, speed = 60, callback) {
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    } else if (callback) {
+      callback();
+    }
+  }
+
+  element.textContent = "";
+  type();
+}
+
+// Example usage:
+document.addEventListener("DOMContentLoaded", () => {
+  const target = document.getElementById("typewriter");
+  const message = "Welcome to the Precognition website.";
+  typeWriter(target, message, 75);
+});
