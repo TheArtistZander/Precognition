@@ -1,17 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     console.log("Precognition website loaded!");
 
-    // Scroll to top on page refresh
-    setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 50);
+    scrollToTopOnRefresh();
+    enableSmoothScroll();
+    setupAudioSwitching();
+    setupFadeInAnimations();
+});
 
-    // Smooth scrolling for navigation links
+/* 🔝 Scroll to top on refresh */
+function scrollToTopOnRefresh() {
+    setTimeout(() => window.scrollTo(0, 0), 50);
+}
+
+/* 🎯 Smooth scroll for nav links */
+function enableSmoothScroll() {
     const navLinks = document.querySelectorAll("nav ul li a");
+
     navLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
+        link.addEventListener("click", event => {
             event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
+            const targetId = link.getAttribute("href").substring(1);
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
@@ -23,26 +31,24 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+}
 
-    // Audio player: dynamic source switching with .mp3 and .m4a fallback
+/* 🎧 Dynamic audio player source switching */
+function setupAudioSwitching() {
     const trackSelector = document.getElementById("track-selector");
     const audioControl = document.getElementById("audio-control");
 
     if (trackSelector && audioControl) {
-        trackSelector.addEventListener("change", function () {
-            const baseName = this.value.replace(/\.(mp3|m4a)$/i, "");
-
+        trackSelector.addEventListener("change", () => {
+            const baseName = trackSelector.value.replace(/\.(mp3|m4a)$/i, "");
             audioControl.innerHTML = "";
 
-            const mp3Source = document.createElement("source");
-            mp3Source.src = `${baseName}.mp3`;
-            mp3Source.type = "audio/mpeg";
-            audioControl.appendChild(mp3Source);
-
-            const m4aSource = document.createElement("source");
-            m4aSource.src = `${baseName}.m4a`;
-            m4aSource.type = "audio/mp4";
-            audioControl.appendChild(m4aSource);
+            ["mp3", "m4a"].forEach(ext => {
+                const source = document.createElement("source");
+                source.src = `${baseName}.${ext}`;
+                source.type = ext === "mp3" ? "audio/mpeg" : "audio/mp4";
+                audioControl.appendChild(source);
+            });
 
             audioControl.pause();
             audioControl.load();
@@ -51,33 +57,40 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+}
 
-    // Fade-in animations for sections, images, and gallery
+/* 🌘 Fade-in effects on scroll */
+function setupFadeInAnimations() {
     const animatedElements = [
         ...document.querySelectorAll("section"),
         document.querySelector(".bio-image"),
         document.querySelector(".band-image"),
         document.querySelector("#gallery")
-    ];
+    ].filter(Boolean);
 
     animatedElements.forEach(el => {
-        if (el) {
-            el.style.opacity = "0";
-            el.style.transition = "opacity 1.5s ease-in-out";
-        }
+        el.style.opacity = "0";
+        el.style.transition = "opacity 1.5s ease-in-out";
     });
 
     const revealOnScroll = () => {
         animatedElements.forEach(el => {
-            if (el) {
-                const elTop = el.getBoundingClientRect().top;
-                if (elTop < window.innerHeight - 100) {
-                    el.style.opacity = "1";
-                }
+            const elTop = el.getBoundingClientRect().top;
+            if (elTop < window.innerHeight - 100) {
+                el.style.opacity = "1";
             }
         });
     };
 
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Trigger on load for visible elements
-});
+    window.addEventListener("scroll", debounce(revealOnScroll));
+    revealOnScroll();
+}
+
+/* ⏳ Debounce scroll for performance */
+function debounce(func, delay = 10) {
+    let timer;
+    return function () {
+        clearTimeout(timer);
+        timer = setTimeout(func, delay);
+    };
+}
