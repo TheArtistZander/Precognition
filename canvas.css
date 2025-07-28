@@ -297,16 +297,18 @@ footer {
     }
 }
 .band-image {
-  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
+  align-items: center;
   margin: 0;
+  padding: 0;
+  height: auto; /* Don't lock it to 100vh */
 }
 
 .band-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 60px); /* Fits within viewport minus header */
+  object-fit: contain; /* Shows full image without cropping */
 }
