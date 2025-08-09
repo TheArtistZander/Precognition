@@ -396,6 +396,47 @@ footer {
   right: 20px;
   font-size: 2em;
   color: #fff;
+    #audio-player {
+  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  border: 2px solid #8b0000;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+  font-family: 'Cinzel Decorative', serif;
+  color: #e0dada;
+  text-align: center;
+}
+
+#audio-player p {
+  font-size: 1.5em;
+  color: #8b0000;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#track-selector {
+  background-color: #111;
+  color: #8b0000;
+  border: 2px solid #8b0000;
+  padding: 10px;
+  font-size: 1.1em;
+  font-family: 'Cormorant Garamond', serif;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+audio {
+  width: 100%;
+  max-width: 500px;
+  filter: invert(100%) grayscale(100%);
+  border: 2px solid #8b0000;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.6);
+}
+
   cursor: pointer;
   text-shadow: 0 0 5px #cc0000;
 }
