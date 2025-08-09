@@ -122,3 +122,26 @@ function typeWriter(element, text, speed = 60, callback) {
   element.textContent = "";
   type();
 }
+/* ========== 📧 Newsletter Popup Logic ========== */
+window.addEventListener("load", function () {
+  // Delay popup appearance by 4 seconds
+  setTimeout(function () {
+    const popup = document.getElementById("newsletter-popup");
+    if (popup) {
+      popup.style.display = "block";
+    }
+  }, 4000);
+});
+
+// Close button functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const closeBtn = document.querySelector(".close-btn");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      const popup = document.getElementById("newsletter-popup");
+      if (popup) {
+        popup.style.display = "none";
+      }
+    });
+  }
+});
