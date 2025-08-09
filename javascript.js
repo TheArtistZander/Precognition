@@ -21,21 +21,27 @@ function enableSmoothScroll() {
   const navLinks = document.querySelectorAll("nav ul li a");
 
   navLinks.forEach(link => {
-    link.addEventListener("click", event => {
-      event.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
+    const href = link.getAttribute("href");
 
-      if (targetElement) {
-        const scrollOffset = window.innerWidth < 500 ? 30 : 50;
-        window.scrollTo({
-          top: targetElement.offsetTop - scrollOffset,
-          behavior: "smooth"
-        });
-      }
-    });
+    // Only apply smooth scroll to internal links (starting with "#")
+    if (href.startsWith("#")) {
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const scrollOffset = window.innerWidth < 500 ? 30 : 50;
+          window.scrollTo({
+            top: targetElement.offsetTop - scrollOffset,
+            behavior: "smooth"
+          });
+        }
+      });
+    }
   });
 }
+
 
 /* 🎧 Dynamic audio player source switching */
 function setupAudioSwitching() {
