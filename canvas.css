@@ -332,3 +332,70 @@ footer {
   font-family: 'Cinzel', serif;
   letter-spacing: 1px;
 }
+/* ========== 🕸 Gothic Newsletter Popup ========== */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.popup-content {
+  background: url('images/parchment-texture.jpg') center/cover;
+  color: #cc0000;
+  font-family: 'Engravers Old English', serif;
+  border: 3px solid #cc0000;
+  box-shadow: 0 0 25px rgba(204, 0, 0, 0.7);
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  margin: 10% auto;
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+}
+
+.popup-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.popup-content p {
+  font-size: 1.2em;
+  font-family: 'Cinzel', serif;
+  color: #fff;
+  margin-bottom: 1.5em;
+}
+
+.popup-button {
+  display: inline-block;
+  background-color: #cc0000;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  padding: 0.6em 1.2em;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  box-shadow: 0 0 10px #cc0000;
+  transition: background-color 0.3s ease;
+}
+
+.popup-button:hover {
+  background-color: #990000;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 0 5px #cc0000;
+}
