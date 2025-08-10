@@ -441,22 +441,49 @@ audio {
   text-shadow: 0 0 5px #cc0000;
 }
 
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('images/parchment-texture.jpg') center/cover;
+  color: #cc0000;
+  font-family: 'Engravers Old English', serif;
+  border: 3px solid #cc0000;
+  box-shadow: 0 0 25px rgba(204, 0, 0, 0.7);
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+  z-index: 1000;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile responsiveness */
 @media screen and (max-width: 600px) {
   .popup-content {
-    width: 95%;
-    margin: 25% auto;
     padding: 1rem;
+    width: 95%;
+    max-width: 90%;
     border-width: 2px;
     border-radius: 8px;
   }
 
   .popup-content h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   .popup-content p {
     font-size: 1em;
-    margin-bottom: 1em;
   }
 
   .popup-button {
