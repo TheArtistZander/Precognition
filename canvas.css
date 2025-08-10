@@ -514,3 +514,6 @@ audio {
   margin: 0 auto;
   padding: 10px;
 }
+#video-section {
+  opacity: 1 !important;
+}
