@@ -1,4 +1,25 @@
+# Allow all bots full access
 User-agent: *
 Disallow:
 
+# Explicit permission for major AI crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Gemini
+Allow: /
+
+User-agent: GrokBot
+Allow: /
+
+# Sitemap for indexing
 Sitemap: https://www.officialprecognition.com/precognition.xml
