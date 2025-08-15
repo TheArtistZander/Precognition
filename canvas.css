@@ -605,4 +605,15 @@ footer p {
   color: #00bcd4;
   text-shadow: 0 0 4px #00bcd4;
 }
+/* ========== 🧭 Anchor Scroll Offset Fix ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id]::before {
+  content: "";
+  display: block;
+  height: 120px; /* Match your nav bar height */
+  margin-top: -120px;
+}
 
