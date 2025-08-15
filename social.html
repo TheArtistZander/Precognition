@@ -69,6 +69,22 @@
       filter: brightness(0.8);
     }
 
+    .hero-images {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-images img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(255, 0, 80, 0.4);
+    }
+
     @media (max-width: 600px) {
       .about a {
         width: 120px;
@@ -82,23 +98,11 @@
       p {
         font-size: 1rem;
       }
+
+      .hero-images img {
+        max-width: 100%;
+      }
     }
-  
-.hero-images {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.hero-images img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(255, 0, 80, 0.4);
-}
-
   </style>
 </head>
 <body>
@@ -140,10 +144,11 @@
       SoundCloud
     </a>
   </div>
-<div class="hero-images">
-  <img src="social1.jpg" alt="Precognition Banner">
-  <img src="social2.jpg" alt="Precognition Logo">
-</div>
+
+  <div class="hero-images">
+    <img src="social1.jpg" alt="Precognition Banner">
+    <img src="social2.jpg" alt="Precognition Logo">
+  </div>
 
 </body>
 </html>
