@@ -218,18 +218,6 @@ audio {
     filter: none;
 }
 
-/* ========== ⚰️ Footer ========== */
-footer {
-    background-color: rgba(17, 17, 17, 0.9);
-    text-align: center;
-    padding: 20px;
-    font-family: 'Engravers Old English', serif;
-    font-size: 1em;
-    color: #cc0000;
-    border-top: 3px solid #cc0000;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-}
-
 /* ========== 📱 Responsive ========== */
 @media screen and (max-width: 768px) {
     body {
@@ -281,11 +269,6 @@ footer {
 
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    footer {
-        padding: 15px;
-        font-size: 0.9em;
     }
 
     #contact p {
@@ -517,6 +500,73 @@ audio {
 #video-section {
   opacity: 1 !important;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  color: #aaa;
+  font-size: 11px;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  padding: 10px 0 14px;
+  border-top: 1px solid #333;
+  z-index: 1000;
+}
+
+.micro-nav nav ul {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.micro-nav nav ul li {
+  margin: 0 10px;
+}
+
+.micro-nav nav ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.micro-nav nav ul li a:hover {
+  color: #00bcd4;
+  text-shadow: 0 0 4px #00bcd4;
+}
+
+/* Optional: Style the copyright text */
+footer p {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 10px;
+  color: #888;
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .micro-nav nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .micro-nav nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .micro-nav nav ul li {
+    flex: 0 0 auto;
+  }
+}
+
 .micro-nav {
   position: fixed;
   bottom: 0;
@@ -556,20 +606,3 @@ audio {
   text-shadow: 0 0 4px #00bcd4;
 }
 
-/* Mobile Optimization */
-@media (max-width: 600px) {
-  .micro-nav nav ul {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .micro-nav nav ul::-webkit-scrollbar {
-    display: none;
-  }
-
-  .micro-nav nav ul li {
-    flex: 0 0 auto;
-  }
-}
