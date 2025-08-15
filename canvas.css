@@ -551,3 +551,20 @@ audio {
   color: #00bcd4;
 }
 
+@media (max-width: 600px) {
+  .micro-nav nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .micro-nav nav ul::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .micro-nav nav ul li {
+    flex: 0 0 auto;
+  }
+}
+
