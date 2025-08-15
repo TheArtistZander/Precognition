@@ -522,40 +522,26 @@ audio {
   bottom: 0;
   width: 100%;
   background-color: #111;
-  border-top: 1px solid #333;
-  z-index: 1001;
-  font-size: 11px;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.micro-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #111;
   z-index: 1000;
   font-size: 11px;
   font-family: 'Cormorant Garamond', serif;
   border-top: 1px solid #333;
-}
-
-.micro-nav nav {
-  overflow: hidden;
+  text-align: center;
+  padding: 8px 0;
 }
 
 .micro-nav nav ul {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
-  padding: 6px 0;
+  padding: 0;
   list-style: none;
 }
 
 .micro-nav nav ul li {
-  margin: 0 8px;
-  flex: 0 0 auto;
+  margin: 0 10px;
 }
 
 .micro-nav nav ul li a {
@@ -576,12 +562,14 @@ audio {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
   }
 
   .micro-nav nav ul::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none;
+  }
+
+  .micro-nav nav ul li {
+    flex: 0 0 auto;
   }
 }
-
-
