@@ -101,7 +101,20 @@
     ]
   }
   </script>
-  <link rel="canonical" href="https://www.officialprecognition.com">
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Offset anchor targets to avoid nav bar overlap */
+  section[id]::before {
+    content: "";
+    display: block;
+    height: 100px; /* Adjust to match your nav bar height */
+    margin-top: -100px;
+  }
+</style>
+<link rel="canonical" href="https://www.officialprecognition.com">
 </head>
 
 <body>
