@@ -528,29 +528,49 @@ audio {
   font-family: 'Cormorant Garamond', serif;
 }
 
+.micro-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  z-index: 1000;
+  font-size: 11px;
+  font-family: 'Cormorant Garamond', serif;
+  border-top: 1px solid #333;
+}
+
+.micro-nav nav {
+  overflow: hidden;
+}
+
 .micro-nav nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0;
-  padding: 4px 0;
+  padding: 6px 0;
   list-style: none;
 }
 
 .micro-nav nav ul li {
-  margin: 0 6px;
+  margin: 0 8px;
+  flex: 0 0 auto;
 }
 
 .micro-nav nav ul li a {
   color: #aaa;
   text-decoration: none;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .micro-nav nav ul li a:hover {
   color: #00bcd4;
+  text-shadow: 0 0 4px #00bcd4;
 }
 
+/* Mobile Optimization */
 @media (max-width: 600px) {
   .micro-nav nav ul {
     flex-wrap: nowrap;
@@ -562,9 +582,6 @@ audio {
   .micro-nav nav ul::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
   }
-
-  .micro-nav nav ul li {
-    flex: 0 0 auto;
-  }
 }
+
 
