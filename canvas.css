@@ -663,3 +663,43 @@ section[id]::before {
     text-align: center;
   }
 }
+/* Gothic Link Button Styles */
+#links {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#links h2 {
+  font-family: 'Engravers Old English', serif;
+  font-size: 2em;
+  color: #cc0000;
+  margin-bottom: 20px;
+}
+
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.link-buttons a {
+  font-family: 'Engravers Old English', serif;
+  font-size: 1.3em;
+  color: #cc0000 !important;
+  background-color: #111;
+  padding: 12px 20px;
+  border: 2px solid #cc0000;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(204, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  text-align: center;
+  display: inline-block;
+}
+
+.link-buttons a:hover {
+  background-color: #cc0000;
+  color: #111 !important;
+  box-shadow: 0 0 15px rgba(204, 0, 0, 0.8);
+}
