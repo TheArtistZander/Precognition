@@ -1,11 +1,20 @@
+/* Base styles */
 body {
   font-family: 'Georgia', serif;
   background-color: #f8f9fa;
+  color: #202122;
   margin: 0;
   padding: 0;
+}
+
+/* Page container */
+#content {
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
 }
 
+/* Sidebar styles */
 #sidebar {
   width: 200px;
   background-color: #ffffff;
@@ -27,24 +36,29 @@ body {
   margin-bottom: 0.5em;
 }
 
+/* Main content styles */
 #main {
   flex-grow: 1;
   padding: 2em;
   background-color: #ffffff;
 }
 
+/* Headings */
 h1 {
   font-size: 2em;
   border-bottom: 1px solid #a2a9b1;
   padding-bottom: 0.3em;
+  margin-top: 0;
 }
 
 h2 {
   font-size: 1.5em;
   margin-top: 1.5em;
   border-bottom: 1px solid #c8ccd1;
+  padding-bottom: 0.2em;
 }
 
+/* Infobox styles */
 .infobox {
   float: right;
   width: 250px;
@@ -58,6 +72,7 @@ h2 {
   background-color: #cedff2;
   text-align: center;
   font-weight: bold;
+  padding: 0.4em;
 }
 
 .infobox td {
@@ -65,16 +80,40 @@ h2 {
   border-top: 1px solid #a2a9b1;
 }
 
+.infobox img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Links */
 a {
-  color: #0645ad;
+  color: #3366cc;
   text-decoration: none;
+}
+
+a:visited {
+  color: #6b4ba1;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* Categories section */
+#categories {
+  border-top: 1px solid #a2a9b1;
+  margin-top: 2em;
+  padding-top: 1em;
+  font-size: 0.9em;
+}
+
 #categories ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+#categories li {
+  margin-bottom: 0.3em;
 }
