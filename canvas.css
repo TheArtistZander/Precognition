@@ -617,3 +617,25 @@ section[id]::before {
   margin-top: -120px;
 }
 
+.link-buttons a {
+  font-family: 'Engravers Old English', serif;
+  font-size: 1.3em;
+  color: #cc0000; /* Gothic crimson */
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 2px solid #cc0000;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.link-buttons a:hover {
+  background-color: #cc0000;
+  color: #000;
+  box-shadow: 0 0 20px #cc0000;
+  text-shadow: 0 0 5px #000;
+}
+
