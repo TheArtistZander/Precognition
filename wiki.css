@@ -5,6 +5,7 @@ body {
   color: #202122;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 /* Page container */
@@ -12,6 +13,7 @@ body {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Sidebar styles */
@@ -20,6 +22,7 @@ body {
   background-color: #ffffff;
   border-right: 1px solid #a2a9b1;
   padding: 1em;
+  box-sizing: border-box;
 }
 
 #sidebar h2 {
@@ -41,6 +44,7 @@ body {
   flex-grow: 1;
   padding: 2em;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 /* Headings */
@@ -87,6 +91,13 @@ h2 {
   height: auto;
 }
 
+.infobox .caption {
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: 0.5em;
+  color: #54595d;
+}
+
 /* Links */
 a {
   color: #3366cc;
@@ -116,4 +127,22 @@ a:hover {
 
 #categories li {
   margin-bottom: 0.3em;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  #content {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #a2a9b1;
+  }
+
+  .infobox {
+    float: none;
+    margin: 1em auto;
+  }
 }
