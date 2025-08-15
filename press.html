@@ -45,6 +45,23 @@
   ]
 }
 </script>
+<style>
+  .gallery-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* adds spacing between images */
+    padding: 1rem; /* optional padding around the gallery */
+  }
+
+  .gallery-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px; /* optional: gives images a soft rounded edge */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* optional: adds subtle depth */
+  }
+</style>
 
 </head>
 
