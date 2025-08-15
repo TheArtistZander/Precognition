@@ -649,7 +649,6 @@ section[id]::before {
   text-shadow: 0 0 5px #000;
 }
 
-/* 📱 Mobile Optimization */
 @media screen and (max-width: 600px) {
   .link-buttons {
     flex-direction: column;
@@ -660,5 +659,7 @@ section[id]::before {
     width: 90%;
     font-size: 1.1em;
     padding: 14px;
+    margin-bottom: 12px;
+    text-align: center;
   }
 }
