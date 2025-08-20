@@ -65,6 +65,35 @@
     "description": "Promise is a haunting ballad by Precognition, exploring themes of vulnerability, trauma, and transformation."
   }
   </script>
+  <script>
+  const style = document.createElement('style');
+  style.innerHTML = `
+    pre {
+      text-align: center;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin: 0 auto;
+      max-width: 100%;
+      font-family: inherit;
+      padding: 1rem;
+    }
+
+    .lyrics {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @media (max-width: 600px) {
+      pre {
+        padding: 0.5rem;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
 </head>
 <body>
   <header>
