@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://www.officialprecognition.com/gallery</loc>
+
+    <image:image>
+      <image:loc>https://officialprecognition.com/Z09_6388.jpg</image:loc>
+      <image:title>Precognition Official Press Photo</image:title>
+      <image:caption>Band press photo for 2025 media use</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://officialprecognition.com/Z09_6290.jpg</image:loc>
+      <image:title>Precognition Live Show</image:title>
+      <image:caption>Precognition live in Minneapolis, 2025</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://officialprecognition.com/Z09_6318.jpg</image:loc>
+      <image:title>Precognition Official Press Photo</image:title>
+      <image:caption>Band press photo for 2025 media use</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://officialprecognition.com/Z09_6360.jpg</image:loc>
+      <image:title>Precognition Live Show</image:title>
+      <image:caption>Precognition live in Minneapolis, 2025</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.officialprecognition.com/images/press-photo.jpg</image:loc>
+      <image:title>Precognition Official Press Photo</image:title>
+      <image:caption>Band press photo for 2025 media use</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.officialprecognition.com/images/live-show.jpg</image:loc>
+      <image:title>Precognition Live Show</image:title>
+      <image:caption>Precognition live in Minneapolis, 2025</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://officialprecognition.com/Z09_6366.jpg</image:loc>
+      <image:title>Precognition Official Press Photo</image:title>
+      <image:caption>Band press photo for 2025 media use</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://officialprecognition.com/Z09_5887.jpg</image:loc>
+      <image:title>Precognition Live Show</image:title>
+      <image:caption>Precognition live in Minneapolis, 2025</image:caption>
+    </image:image>
+
+  </url>
+
+</urlset>
