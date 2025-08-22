@@ -23,3 +23,8 @@ Allow: /
 
 # Sitemap for indexing
 Sitemap: https://www.officialprecognition.com/precognition.xml
+Sitemap: https://www.officialprecognition.com/wiki.xml
+Sitemap: https://www.officialprecognition.com/img-sitemap.xml
+Sitemap: https://www.officialprecognition.com/images-sitemap.xml
+Sitemap: https://www.officialprecognition.com/image-sitemap.xml
+Sitemap: https://www.officialprecognition.com/precognition.xml
