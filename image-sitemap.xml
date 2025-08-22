@@ -2,8 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
- 
-          
   <!-- Music Page -->
   <url>
     <loc>https://www.officialprecognition.com/music</loc>
@@ -22,7 +20,6 @@
       <image:title>Precognition Band Portrait</image:title>
       <image:caption>Jacob Alexander (Zander) and Sam of Precognition</image:caption>
     </image:image>
-          </urlset>
   </url>
 
 </urlset>
